@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { GroupchatsocketService } from '../../services/Groupchatsocket.service';
+import { GroupchatsocketService } from '../../services/groupchatsocket.service';
 @Component({
   selector: 'app-chatpage',
   templateUrl: './chatpage.component.html',

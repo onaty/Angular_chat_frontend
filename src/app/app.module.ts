@@ -9,7 +9,7 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 import { RatingModule } from 'ngx-bootstrap';
 
 //services
-import { GroupchatsocketService } from './services/Groupchatsocket.service';
+import { GroupchatsocketService } from './services/groupchatsocket.service';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 

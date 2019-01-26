@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GroupchatsocketService } from '../../services/Groupchatsocket.service';
+import { GroupchatsocketService } from '../../services/groupchatsocket.service';
 import { Router } from '@angular/router';
 
 

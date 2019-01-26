@@ -3,11 +3,11 @@ const express = require('express');
 const app = express();
 
 // Serve static files
-app.use(express.static(__dirname + '/dist/onaty-chatapp'));
+app.use(express.static(__dirname + '/dist/chatfront'));
 
 // Send all requests to index.html
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/onaty-chatapp/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/chatfront/index.html'));
 });
 
 // default Heroku port
