@@ -9,7 +9,7 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 import { RatingModule } from 'ngx-bootstrap';
 
 //services
-import { GroupchatsocketService } from './services/Groupchatsocket.service';
+import { GroupchatsocketService } from './services/groupchatsocket.service';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 
@@ -20,7 +20,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { GrouptestComponent } from './components/grouptest/grouptest.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { ProfileComponent } from './components/profile/profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -42,6 +42,7 @@ import { UserorderpageComponent } from './house/userorderpage/userorderpage.comp
 import { WorkerviewrequestpageComponent } from './house/workerviewrequestpage/workerviewrequestpage.component';
 import { CartComponent } from './house/cart/cart.component';
 import { SearchpageComponent } from './house/searchpage/searchpage.component';
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
   {

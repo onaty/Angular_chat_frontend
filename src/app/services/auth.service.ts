@@ -16,14 +16,14 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/users/register', user, { headers: headers })
+    return this.http.post('https://onaty-node-chatapp-api.herokuapp.com/users/register', user, { headers: headers })
       .pipe(map(res => res.json()));
   }
   //authenticateUser
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/users/authenticate', user, { headers: headers })
+    return this.http.post('https://onaty-node-chatapp-api.herokuapp.com/users/authenticate', user, { headers: headers })
       .pipe(map(res => res.json()));
   }
 
@@ -50,7 +50,7 @@ export class AuthService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:8080/users/profile', { headers: headers })
+    return this.http.get('https://onaty-node-chatapp-api.herokuapp.com/users/profile', { headers: headers })
       .pipe(map(res => res.json()));
   }
 
@@ -64,25 +64,25 @@ export class AuthService {
     return tokenNotExpired('id_token');
   }
   getallusers() {
-let headers = new Headers();
-headers.append('Content-Type', 'application/json');
-return this.http.get('http://localhost:8080/users/getallusers', {headers: headers})
-.pipe(map(res => res.json()));
-}
-//add a new friend user
-addnewfriend(addfriend) {
-  let headers = new Headers();
-  headers.append('Content-Type', 'application/json');
-  return this.http.post('http://localhost:8080/users/addfriend', addfriend, { headers: headers })
-    .pipe(map(res => res.json()));
-}
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('https://onaty-node-chatapp-api.herokuapp.com/users/getallusers', { headers: headers })
+      .pipe(map(res => res.json()));
+  }
+  //add a new friend user
+  addnewfriend(addfriend) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('https://onaty-node-chatapp-api.herokuapp.com/users/addfriend', addfriend, { headers: headers })
+      .pipe(map(res => res.json()));
+  }
 
-//get all of a usersfriend
-   myfriends(friendsusername) {
-     let headers = new Headers();
-     headers.append('Content-Type', 'application/json');
-return this.http.get('http://localhost:8080/users/myfriends/'+friendsusername,{headers: headers})
-  .pipe(map(res => res.json()));
-}
+  //get all of a usersfriend
+  myfriends(friendsusername) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('https://onaty-node-chatapp-api.herokuapp.com/users/myfriends/' + friendsusername, { headers: headers })
+      .pipe(map(res => res.json()));
+  }
 
 }

@@ -3,7 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 
-import { GroupchatsocketService } from '../../services/Groupchatsocket.service';
+import { GroupchatsocketService } from '../../services/groupchatsocket.service';
 
 @Component({
   selector: 'app-login',
