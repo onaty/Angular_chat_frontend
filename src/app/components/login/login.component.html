@@ -1,0 +1,28 @@
+<br>
+<div class="container col-6">
+
+  <h2 class="page-header" >Login</h2>
+  <form class="form-signin" (submit)="onLoginSubmit()">
+    <div class="row">
+      <label for="">Username</label>
+      <div class="form-group input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control"  placeholder="Enter Username" [(ngModel)]="username" name="username" value="">
+      </div>
+    </div>
+     <div class="row">
+        <label for="">password</label>
+        <div class="form-group input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+          </div>
+          <input type="password" class="form-control" placeholder=" Enter Password" [(ngModel)]="password" name="password">
+        </div>
+      </div>
+
+          <input class="btn btn-lg btn-primary" type="submit" value="Login">
+  </form>
+
+</div>

@@ -1,0 +1,46 @@
+<br>
+
+<form (submit)="onRegisterSubmit()">
+  <div class="container col-6">
+   <h2 class="page-header" >Registration </h2>
+    <div class="row">
+      <label for="">Full name</label>
+      <div class="form-group input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="name" aria-label="name" [(ngModel)]="name" name="name" value="">
+      </div>
+    </div>
+    <div class="row">
+      <label for="basic-url">Username</label>
+      <div class="form-group input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" [(ngModel)]="username" name="username" value="">
+      </div>
+    </div>
+    <div class="row">
+      <label for="basic-url">Email</label>
+      <div class="form-group input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Email" aria-label="Email" [(ngModel)]="email" name="email" value="">
+      </div>
+    </div>
+    <div class="row">
+      <label for="basic-url">password</label>
+      <div class="input-group form-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="password" aria-label="password" [(ngModel)]="password" name="password">
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary" name="" value="submit">
+    </div>
+  </div>
+</form>

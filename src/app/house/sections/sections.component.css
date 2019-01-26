@@ -1,0 +1,17 @@
+.fixedsizediv{
+  height: 250px;
+  width: 200px;
+
+}
+
+.fixedsizediv2{
+  height: 450px;
+  width: 1000px;
+
+}
+
+.effect{
+
+z-index: 1;
+position: relative;
+}

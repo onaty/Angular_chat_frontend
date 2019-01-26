@@ -1,0 +1,106 @@
+<style>
+  #overlay1 {
+    position: fixed;
+    display: none;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  #text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+</style>
+
+<div class="chatbox">
+    <div class="chatlogs">
+      <div class="" *ngFor="let item of   databasemessageArray">
+        <div class="chat friend"*ngIf="item.msgFrom==this.friendname">
+          <div class="user-photo "><img src="http://192.168.0.100:3000/uploads/517e04b27c905.jpg"></div>
+          <p class="chat-message text-left">
+            <span>
+              <!-- <strong>{{item.msgFrom}} : </strong>-->
+               {{item.msg}}</span></p>
+        </div>
+        <div class="chat self" *ngIf="item.msgFrom==this.user">
+          <div class="user-photo"><img src="http://192.168.0.100:3000/uploads/517e04b27c905.jpg"></div>
+          <p class="chat-message text-right">
+            <span>
+              <!-- <strong>{{item.msgFrom}} : </strong> -->
+             {{item.msg}}</span></p>
+        </div>
+      </div>
+      <div class="" *ngFor="let item of  messageArray">
+        <div class="chat friend"*ngIf="item.msgFrom==this.friendname">
+          <div class="user-photo "><img src="http://192.168.0.100:3000/uploads/517e04b27c905.jpg"></div>
+          <p class="chat-message text-left">
+            <span>
+              <!-- <strong>{{item.msgFrom}} : </strong>-->
+               {{item.msg}}</span></p>
+        </div>
+        <div class="chat self" *ngIf="item.msgFrom==this.user">
+          <div class="user-photo"><img src="http://192.168.0.100:3000/uploads/517e04b27c905.jpg"></div>
+          <p class="chat-message text-right">
+            <span>
+              <!-- <strong>{{item.msgFrom}} : </strong> -->
+             {{item.msg}}</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="chat-form" id="textbox">
+            <textarea  id="text" [(ngModel)]="messageText"></textarea>
+
+            <button type="button" class="btn btn-success pull-right"  (click)="messagesender()">Send</button>
+  <!--            <input type="button" value="send"  onclick="getText()" />-->
+        </div>
+  </div>
+
+  <!--
+ <div class="container-fluid">
+    <div class="row">
+        <h2>Realtime Chat Application</h2>
+        <hr>
+    </div>
+
+<div class="row">
+    <div class="well" style="height:200px; padding:15px;">
+      <div *ngFor="let item of   databasemessageArray">
+<div class="" *ngIf="item.msgFrom==this.user">
+   <span><strong>{{item.msgFrom}} : </strong> {{item.msg}}</span>
+</div>
+<div class="" *ngIf="item.msgFrom==this.friendname">
+   <span><strong>{{item.msgFrom}} : </strong> {{item.msg}}</span>
+</div>
+
+    </div>
+    </div>
+    <br>
+    <div class="row">
+
+        <div class="well" style="height:200px; padding:15px;">
+          <div *ngFor="let item of messageArray">
+           <span><strong>{{item.msgFrom}} : </strong> {{item.msg}}</span>
+           </div>
+        </div>
+    </div>
+    <div class="row"><br><br><br><br><br><br>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="messageText">
+        </div>
+        <div class="col-sm-2">
+                <button type="button" class="btn btn-success pull-right"  (click)="messagesender()">Send</button>
+        </div>
+    </div>
+</div>  -->
