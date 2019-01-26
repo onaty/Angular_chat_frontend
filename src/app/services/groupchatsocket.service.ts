@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GroupchatsocketService {
-  socket = io('http://localhost:8080/');
+  socket = io('https://onaty-node-chatapp-api.herokuapp.com/');
   // roomname;
   constructor() {
     var user1 = localStorage.getItem('userdetails');
